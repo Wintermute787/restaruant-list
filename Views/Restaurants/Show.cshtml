@@ -1,0 +1,16 @@
+<h1>To Do List Item Details: </h1>
+
+<h2>@Model["best_restaurant"].GetName()</h2>
+<h3>Category: @Model["cuisine"].GetCuisineName()</h3>
+
+
+
+
+
+<a href='/cuisines/@Model["cuisine"].GetId()/restaurant/@Model["best_restaurant"].GetId()edit'>Edit this Restaurant</a>
+<form action="/cuisine/@Model["cuisine"].GetId()/restaurant/@Model["best_restaurant"].GetId()/delete" method="post">
+    <button type="submit">Delete this item</button>
+</form>
+<p><a href='/cuisines/@Model["cuisine"].GetId()/restaurant/new'>Add a new Restaurant</a></p>
+<p><a href='/cuisines'>Return to Cuisine list</a></p>
+<p><a href='/'>Return to Main Page</a></p>

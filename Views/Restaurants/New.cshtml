@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Hello friend!</title>
+  </head>
+  <body>
+    @* <h1>To Do List</h1>
+
+    <form action="/items" method="post">
+    <label for="description">Add a new item</label>
+    <input id="description" name="description" type="text">
+    <button type="submit">Submit</button>
+  </form> *@
+  <h1>Add a new Restaurant to @Model.GetCuisineName()</h1>
+
+  <form action='/cuisine/@Model.GetId()/restaurants' method='post'>
+    <input id='cuisineId' name='cuisineId' type='hidden' value='@Model.GetId()'>
+    <label for='restName'>Restaurant Name</label>
+    <input id='restName' name='restName' type='text'>
+    <button type='submit'>Add item</button>
+  </form>
+
+</body>
+</html>

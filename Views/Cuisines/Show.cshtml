@@ -1,0 +1,13 @@
+<h3>Here are all of the Restaurants for this type of cuisine:</h3>
+
+<ol>
+  @foreach(var restaurant in @Model["best_restaurant"])
+  {
+    <li><a
+    href="/cuisines/@Model["cuisine"].GetId()/restaurants/@restaurant.GetId()">@restaurant.GetName()</a></li>
+  }
+</ol>
+
+<p><a href='/cuisines/@Model["cuisine"].GetId()/restaurants/new'>Add a new Restaurant</a></p>
+<p><a href='/cuisines'>Return to cuisine list</a></p>
+<p><a href='/'>Return to Main Page</a></p>
